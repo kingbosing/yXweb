@@ -1,0 +1,70 @@
+#report{
+    .el-table__row{
+        &:hover{
+            .icon_edit{
+                height: 15px;
+                width: 15px;
+                display: block;
+                float: right;
+                margin: 5px;
+                background: url(../assets/finance/icon_edit_normal.jpg);
+                &:hover{
+                    background: url(../assets/finance/icon_edit_selected.jpg)
+                }
+            }
+        }
+    }
+    
+}
+
+
+// 添加公式
+.dialog_report{
+    .el-dialog__header{
+        padding: 10px 20px 10px;
+        font-size: 16px;
+    }
+.dialog_content{
+    .header{
+      margin-bottom: 20px;
+      >span{
+        margin:0 20px 0 20px;
+      }
+      .el-button{
+        margin-left: 40px;
+      }
+      .el-select,.el-autocomplete{
+        width: 238px;
+      }
+    }
+    .content{
+      width: 998px;
+      margin: 0 auto 50px;
+    }
+    
+  }
+  .dialog_button{
+        text-align: center;
+        .el-button{
+            margin:0 50px 40px;
+        }
+    }
+    .dialog_alert{
+        height: 40px;
+        line-height: 40px;
+        color: #f99740;
+        font-size: 12px;
+        padding: 0 20px;
+        .el-button{
+            float: right;
+        }
+    }
+}
+
+
+.dialog_footer{
+    text-align: center;
+    .el-button{
+        margin: 30px;
+    }
+}

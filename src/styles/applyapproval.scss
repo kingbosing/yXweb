@@ -1,0 +1,62 @@
+.applyStatusValue-no {
+    display: block;
+    width: 120px;
+    height: 120px;
+    // background: url(/images/applyAndapproval_icon.png)-368px -502px;
+    background: url(/images/applyAndapproval_icon.png) -368px -502px;
+}
+
+.applyStatusValue-back {
+    display: block;
+    width: 120px;
+    height: 120px;
+    // background: url(/images/applyAndapproval_icon.png)-53px -502px
+    background: url(/images/applyAndapproval_icon.png) -53px  -502px;
+}
+
+.applyStatusValue-pass {
+    display: block;
+    width: 120px;
+    height: 120px;
+    // background: url(/images/applyAndapproval_icon.png)-213px -502px;
+    background: url(/images/applyAndapproval_icon.png) -213px  -502px;
+}
+
+.applyStatusValue-noPass {
+    display: block;
+    width: 120px;
+    height: 120px;
+    // background: url(/images/applyAndapproval_icon.png)-528px -502px
+    background: url(/images/applyAndapproval_icon.png) -528px  -502px;
+
+}
+
+.baseContent p{
+    margin: 0;
+    line-height: 25px;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: right 1s;
+}
+
+.MoreCopyer {
+    .el-dialog__body {
+        padding: 30px 20px 0;
+        min-height: 500px;
+        overflow: hidden;
+    }
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: right 1s;
+}
+
+.leave .el-select,.toApply .el-select{
+    width: 100%;
+}
+.copyList{
+    li img{
+        border-radius: 50%;
+    }
+}

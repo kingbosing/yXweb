@@ -1,0 +1,75 @@
+﻿body {
+  font-size: 14px;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: $layout-z-index;
+  top: 0;
+}
+.main-container {
+  background: $layout-container-bg;
+  padding: $layout-main-container-padding;
+  padding-top: 70px;// $navbar-height;
+  height: 100%;
+  min-width: 1230px;
+  overflow-x: auto;
+  .temlateMain{
+    height: 100%;
+    .el-header{
+      line-height: 50px;
+      border-bottom: 1px solid #dedede;
+      font-size: 16px;
+      color: #323232;
+      font-weight: bold;
+    }
+  }
+}
+.app-main {
+  background: #fff;
+}
+.breadcrumb-container {
+  float: left;
+}
+// .is-active{
+//       .el-submenu__title{
+//         background: #f99740 !important;
+//       }
+//     }
+.right-menu {
+  .switchHeadMenu{
+    float: left;
+    margin: 0 25px;
+  }
+  
+  .el-radio-group {
+    span {
+      border: 0px !important;
+      color: #2b2b2b !important;
+      border-radius: 0px !important;
+      border-bottom: 4px #fff solid !important;
+    }
+    
+    .is-active span,
+    span:hover {
+      background: #fff;
+      border-bottom: 4px $yellow solid !important;
+      -webkit-box-shadow: 0px 0 0 0 #fff !important;
+      box-shadow: 0px 0 0 0 #fff !important;
+    }
+  }
+  .el-dropdown-link{
+    .user{
+      background: url(../assets/home/icon_personal.png) center center no-repeat;
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      background-size: 14px 14px;
+      margin-top: 19px;
+      // background-position-y: 5px;
+      margin-right: 5px;
+      float: left;
+
+    }
+  }
+}

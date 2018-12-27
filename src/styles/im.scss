@@ -1,0 +1,219 @@
+.im-input{
+	outline: none;
+	border: none;
+}
+
+.im-avatar{
+	height: 40px;
+	width: 40px;
+	background-size: cover;
+	background-repeat: no-repeat;
+  border-radius: 20px;
+  border: 1px solid #FFF;
+}
+
+.im-selected{
+	background-color: #E0E8F2;
+}
+
+.im-clearfix{
+	clear: both;
+}
+
+.im-container{
+	position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+    background-size: 100%;
+    background-position: center;
+}
+
+.im-conversation-box{
+	height: 100%;
+	width: 300px;
+	min-width: 300px;
+	float: left;
+	position: relative;
+}
+
+.im-conversation-list{
+    height: 100%;
+    overflow-y: auto;
+    background: #f9f9fa;
+    opacity: 0.9;
+}
+
+.im-conversation{
+	width: 100%;
+    height: 60px;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.im-conversation:hover{
+	background-color: #e0e8f2;
+	transition: all 0.5s;
+}
+
+.im-conversation-user{
+	float: left;
+}
+
+.im-conversation-avatar{
+	margin-right: 10px;
+}
+
+.im-conversation-title{
+	font-size: 13px;
+}
+
+.im-conversation-message{
+  font-size:12px;
+  position: absolute;
+  bottom: 5px;
+  left:70px;
+	color: #999;
+  display: inline;
+  line-height: 12px;
+
+}
+
+
+
+.im-conversation-content{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 80%;
+}
+
+.im-conversation-senttime{
+  position: absolute;
+  right: 2px;
+  top: -1px;
+}
+
+
+
+.im-message{
+	min-height: 40px;
+	margin-top: 10px;
+}
+
+
+.im-message-receiver-avatar{
+	float: left;
+	margin-left: 10px;
+}
+
+.im-message-content{
+    max-width: 600px;
+    min-height: 40px;
+    min-width: 80px;
+    word-wrap: break-word;
+    display: inline-block;
+    padding: 4px 5px 14px 7px;
+    box-sizing: border-box;
+    position: relative;
+    opacity: 0.9;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.im-message-senttime{
+	display: inline-block;
+	position: relative;
+	color: #333;
+}
+
+.im-message-receiver .im-message-senttime{
+  top: 20px;
+  left: -37px
+}
+
+.im-message-receiver .im-message-content{
+    margin-left: 18px;
+    border: 1px solid #999;
+}
+
+.im-message-receiver .im-message-content:before,.im-message-content:after{
+	content: "";
+  border-bottom: 12px solid;
+  border-left: 4px solid;
+  border-right: 11px solid;
+  display: block;
+  position: absolute;
+}
+
+.im-message-receiver .im-message-content:before{
+  border-color: transparent #999 transparent transparent;
+  left: -15px;
+  top: 12px;
+}
+
+.im-message-receiver .im-message-content:after{
+  border-color: transparent #FFF transparent transparent;
+  top: 13px;
+  left: -12px;
+}
+
+.im-message-sender-avatar{
+	float: right;
+	margin-right: 10px;
+}
+
+.im-message-sender .im-message-content{
+	float: right;
+	margin-right: 14px;
+	background-color: #cae7fd;
+}
+
+.im-message-sender{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.im-message-sender .im-message-senttime{
+    position: absolute;
+    bottom: 6px;
+    right: 75px;
+}
+
+
+.im-message-sender .im-message-content:after{
+  border-top: 0;
+  border-bottom: 18px solid;
+  border-left: 11px solid;
+  border-right: 12px solid;
+	right: -20px;
+  top: 11px;
+  border-color: transparent transparent transparent #cae7fd;
+}
+
+.im-edior-box{
+  border-top: 1px solid #ececed;
+	height: 60px;
+  position: absolute;
+ 
+  bottom: 0;
+}
+
+.im-editor-input{
+	height: 60px;
+}
+
+.im-editor-input-content{
+	box-sizing: border-box;
+	padding: 10px;
+  width: 100%;
+  height: 60px;
+	max-height: 60px;
+	resize: none;
+  line-height: 40px;
+}

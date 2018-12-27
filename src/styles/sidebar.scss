@@ -1,0 +1,242 @@
+#app {
+  // 主体区域
+  .main-container {
+    min-height: 100%;
+    transition: margin-left 0.02s;
+    margin-left: 50px;
+  }
+
+  // 侧边栏
+  .sidebar-container {
+    margin-top: $navbar-height;
+    transition: width 0.02s;
+    width: 200px !important;
+    height: 100%;
+    position: fixed;
+    font-size: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9001;
+    overflow: hidden;
+
+    &.hideSidebar {
+      width: 50px!important ;
+      .el-submenu {
+        overflow: hidden;
+        & > .el-submenu__title {
+          .el-submenu__icon-arrow {
+            display: none;
+          }
+        }
+      }
+      .el-submenu {
+        & > .el-submenu__title {
+          & > span {
+            height: 0;
+            width: 0;
+            overflow: hidden;
+            visibility: hidden;
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .no-icon {
+      padding-left: 50px;
+    }
+
+    //reset element-ui css
+    .horizontal-collapse-transition {
+      transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
+    }
+    .el-scrollbar{
+      height: 100%!important;
+      background-color: #333;
+    }
+    .el-scrollbar__wrap {
+      overflow-y: scroll;
+      height: 100%;
+      overflow-x: hidden;
+    }
+    .scrollbar-wrapper {
+      height: calc(100%+15px);
+      .el-scrollbar__view {
+        height: auto;//20180907修改-h
+      }
+    }
+    .is-horizontal {
+      display: none;
+    }
+    a {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+    }
+    .svg-icon {
+      margin-right: 16px;
+    }
+    .el-menu {
+      border: none;
+      height: 100%;
+      width: 100% !important;
+    }
+    .el-menu-item {
+      padding: 0 !important;
+    }
+    .el-submenu > .el-submenu__title {
+      padding: 0px !important;
+    }
+    .el-menu-item.menu-top > a,
+    .el-submenu.menu-top > div > a {
+      padding-left: 17px !important;
+      b {
+        margin-right: 17px;
+      }
+    }
+
+    .menu-wrapper {
+      > .el-menu-item,
+      > .el-submenu {
+        // color: $menuColor !important;
+      }
+    }
+
+    .el-submenu > .el-submenu__title,
+    .el-menu-item {
+      color: #ccc !important;
+      background-color: #333;
+      &:hover{
+      color: #fff !important;
+
+      }
+    }
+    .el-submenu.is-active > .el-submenu__title{
+      background: #f99740 !important;
+      color: #fff !important;
+    }
+    .el-submenu {
+      .el-submenu > .el-submenu__title,
+      .el-menu-item {
+        &:hover {
+          color: #fff !important;
+        }
+      }
+      i {
+        color: #fff;
+      }
+    }
+  .sidebar-container .nest-menu .el-submenu > .el-submenu__title,
+    .sidebar-container .el-submenu .el-menu-item {
+      min-width: 180px !important;
+      background-color: $subMenuBg !important;
+      &:hover {
+        background-color: $menuSubItemHover !important;
+      }
+  }
+  // .sidebar-container .menu-wrapper
+   .el-submenu.is-active.is-opened > .el-submenu__title,
+    .el-menu-item.is-active.menu-top {
+      background: #f99740 !important;
+      color: #fff !important;
+      &:after {
+        content: '◤'; //content: "\25E4";
+        position: absolute;
+        right: -14px;
+        transform: rotate(-45deg);
+        font-size: 40px;
+      }
+    }
+    .el-menu-item.is-active {
+      color: #f99740 !important;
+    }
+  }
+
+  
+  //适配移动端
+  .mobile {
+    .main-container {
+      margin-left: 0px;
+    }
+    .sidebar-container {
+      transition: transform 0.28s;
+      width: 180px !important;
+    }
+    &.hideSidebar {
+      .sidebar-container {
+        transition-duration: 0.3s;
+        transform: translate3d(-180px, 0, 0);
+      }
+    }
+  }
+  .withoutAnimation {
+    .main-container,
+    .sidebar-container {
+      transition: none;
+    }
+  }
+
+  .sidebar-container b.menu-icon {
+    background: url(/images/navigation_icon.png) no-repeat;
+    display: inline-block;
+    height: 16px;
+    width: 20px;
+    &.menu-icon-home {
+      background-position: -1px 0;
+    }
+    &.menu-icon-crm {
+      background-position: -23px 0;
+    }
+    &.menu-icon-apply {
+      background-position: -264px 0;
+    }
+    &.menu-icon-manager {
+      background-position: 0;
+    }
+    &.menu-icon-hr {
+      //人事
+      background-position: -45px 0;
+    }
+    &.menu-icon-fin {
+      background-position: -67px 0;
+    }
+    &.menu-icon-storage {
+      background-position: -89px 0;
+    }
+    &.menu-icon-contract {
+      background-position: -111px 0;
+    }
+    &.menu-icon-meeting {
+      background-position: -133px 0;
+    }
+    &.menu-icon-task {
+      // project 任务
+      background-position: -154px 0;
+    }
+    &.menu-icon-job {
+      //招聘
+      background-position: -176px 0;
+    }
+    &.menu-icon-doc {
+      background-position: -198px 0;
+    }
+    &.menu-icon-announcement {
+      background-position: -220px 0;
+    }
+    &.menu-icon-dc {
+      //数据中心
+      background-position: -242px 0;
+    }
+    &.menu-icon-more {
+      background-position: -286px 0;
+    }
+    &.menu-icon-financial {
+      background-position: 2px 0;
+    }
+  }
+
+  .sidebar-container b.menu-icon.menu-icon-kpi {
+    background: url(/images/PerformanceAppraisal/performance_appraisal.png) no-repeat 2px 0;
+  }
+}

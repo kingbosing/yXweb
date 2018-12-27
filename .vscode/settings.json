@@ -1,0 +1,19 @@
+﻿{
+  "prettier.eslintIntegration": true, // 集成Eslint
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.printWidth": 200, // 每行字符数可支持
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    },"html","vue"
+  ]
+}

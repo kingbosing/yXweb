@@ -1,0 +1,27 @@
+.stateBar {
+    width: 70px;
+    height: 28px;
+    display: inline-block;
+    // padding: 4px 8px;
+    border: transparent;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 28px;
+    &.noBegin {
+        border: 1px solid #dedede;
+        background-color: #f8f8f8;
+        color: #8a8a8a;
+    }
+    &.ongoing {
+        background-color: #5CB85C;
+    }
+    &.endBar {
+        background-color: #A2AFB7;
+    }
+}
+
+.el-button--small, .el-button--small.is-round{
+    padding: 6px 15px;
+}

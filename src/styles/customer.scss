@@ -1,0 +1,155 @@
+#customerListData{
+    .cell{
+      text-align: center
+    }
+    th.is-leaf {
+      border: none;
+      line-height: 40px;
+      background: #f8f8f8;
+      text-align: center;
+    }
+  }
+  
+  #theShade{
+    .el-dialog{
+      height: 100%;
+      float: right;
+      width: 720px;
+      .el-dialog__header{
+          display: none;
+      }
+      .el-dialog__body{
+          height: 100%;
+          padding: 0;
+          #TheApproval{
+              height: 100%;
+              overflow: hidden;
+              .el-container,.el-main{
+                  height: 100%;
+              }
+              .el-container{
+                height: 100%;
+                .el-aside{
+                    border-right: 1px solid #dedede;
+                    >div{
+                        height: 80px;
+                        padding: 0 20px;
+                        text-align: right;
+                        line-height: 80px;
+                        color: #323232;
+                        cursor: pointer;
+                        border-bottom: 1px solid #dedede;
+                        &.act{
+                            color: #f99740;
+                            border-right: 2px solid #f99740;
+                        }
+                        &:hover{
+                            color: #f99740;
+                          
+                        }
+                    }
+                }
+                .el-main{
+                   .inforBox{
+                    h4 {
+                        
+                        height: 100%;
+                        line-height: 60px;
+                        margin: 0;
+                        padding: 0;
+                        border-bottom: 1px solid #dedede;
+                        b{
+                            height: 15px;
+                            width: 3px;
+                            background: #f99740;
+                            float: left;
+                            margin: 23px 10px 0 0;
+                        
+                        }
+                        button{
+                            display: block;
+                            float: right;
+                            margin: 12px -10px;
+                        }
+                    }
+                      
+                       .el-main{
+                        .cellInfo {
+                            overflow: hidden;
+                            // margin-bottom: 20px;
+                            padding-left: 20px;
+                            .face{
+                                border-radius: 50%;
+                            }
+                            h5{
+                                padding: 0;
+                                margin: 0;
+                            }
+                        }
+                        .baseInfo{
+                            .el-row .el-col {
+                               margin: 30px 0 10px;
+                               font-size: 16px;
+                               color: #333;
+                               padding-left: 30px;
+                               .span_8a {
+                                   color: #8a8a8a;
+                                   margin-right: 14px;
+                               }
+       
+                           }
+       
+                        }
+                        .cellInfo_people{
+                            padding:20px 0 10px;
+                        }
+                       }
+                   }
+
+                }
+              }
+              .edit_genji{
+                width: 450px;
+                margin: 0 auto;
+                >img{
+                    margin:35px auto;
+                    display: block;
+                }
+            }
+          }
+        .titleN {
+            width: 100%;
+            // height: 140px;
+            background-color: #f99740;
+            color: #fff;
+            padding: 30px 20px;
+            line-height: 30px;
+            border-bottom: none;
+            font-size: 16px;
+            font-weight: normal;
+            h2 {
+                margin: 0;
+                font-size: 20px;
+                font-weight: normal;
+                img {
+                    margin-right: 10px;
+                }
+                i {
+                    float: right;
+                    font-style: normal;
+                    cursor: pointer;
+                    font-size: 18px;
+                }
+            }
+            p {
+                font-size: 18px;
+                margin-top: 20px;
+                padding-left: 40px;
+            }
+        }
+       
+        
+      
+    }
+  }
+}

@@ -1,0 +1,122 @@
+<template>
+  <div class="comp-full-calendar">
+    <!-- header pick month -->
+    <Fcheader :current-date="currentDate"
+      :title-format="titleFormat"
+      :first-day="firstDay"
+      :month="month"
+      :month-names="monthNames"
+      @change="emitChangeMonth">
+
+      <div slot="header-left">
+        <slot name="fc-header-left">
+        </slot>
+      </div>
+
+      <div slot="header-right">
+        <slot name="fc-header-right">
+        </slot>
+      </div>
+    </Fcheader>
+    <!-- body display date day and events -->
+    <Fcbody :current-date="currentDate" :events="events" :month-names="monthNames"
+      :week-names="weekNames" :first-day="firstDay"
+      @eventclick="emitEventClick" @dayclick="emitDayClick"
+      @moreclick="emitMoreClick">
+      <div slot="body-card">
+        <slot name="fc-body-card">
+        </slot>
+      </div>
+    </Fcbody>
+  </div>
+</template>
+<script type="text/babel">
+import langSets from './dataMap/langSets'
+import Fcheader from './components/header.vue'
+import Fcbody from './components/body.vue'
+
+export default {
+  props: {
+    events: { // events will be displayed on calendar
+      type: Array,
+      default: function() {
+        return []
+      }
+    },
+    month: {
+      type: Number,
+      default: new Date().getMonth()
+    },
+    lang: {
+      type: String,
+      default: 'en'
+    },
+    firstDay: {
+      type: Number | String,
+      validator(val) {
+        const res = parseInt(val)
+        return res >= 0 && res <= 6
+      },
+      default: 0
+    },
+    titleFormat: {
+      type: String,
+      default() {
+        return langSets[this.lang].titleFormat
+      }
+    },
+    monthNames: {
+      type: Array,
+      default() {
+        return langSets[this.lang].monthNames
+      }
+    },
+    weekNames: {
+      type: Array,
+      default() {
+        const arr = langSets[this.lang].weekNames
+        return arr.slice(this.firstDay).concat(arr.slice(0, this.firstDay))
+      }
+    }
+  },
+  data() {
+    return {
+      currentDate: new Date()
+    }
+  },
+  methods: {
+    emitChangeMonth(start, end, currentStart, current) {
+      this.currentDate = current
+      this.$emit('changeMonth', start, end, currentStart)
+    },
+    emitEventClick(event, jsEvent, pos) {
+      this.$emit('eventClick', event, jsEvent, pos)
+    },
+    emitDayClick(day, jsEvent) {
+      this.$emit('dayClick', day, jsEvent)
+    },
+    emitMoreClick(day, events, jsEvent) {
+      this.$emit('moreClick', day, event, jsEvent)
+    }
+  },
+  components: {
+    Fcheader,
+    Fcbody
+  }
+}
+
+</script>
+<style lang="scss">
+  .comp-full-calendar{
+    // font-family: "elvetica neue", tahoma, "hiragino sans gb";
+    padding:20px;
+    background: #fff;
+    max-width: 960px;
+    margin:0 auto;
+    ul,p{
+      margin:0;
+      padding:0;
+      font-size: 14px;
+    }
+  }
+</style>
